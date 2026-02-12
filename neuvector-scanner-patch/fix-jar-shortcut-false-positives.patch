@@ -10,10 +10,6 @@ their MANIFEST.MF fallback produces generic module names like jar:okhttp,
 jar:library, jar:metrics, jar:common. These collide with the shortcut keys
 from unrelated CVE entries, causing widespread false positive matches.
 
-Documented impact: 28 false positive CVE findings across 23 OpenTelemetry
-JARs in a single Spring Boot application image, matching against Jenkins
-FindBugs Plugin, Jenkins Metrics Plugin, and OkHttp CVEs.
-
 This patch removes the jar: shortcut key generation while preserving the
 original groupId:artifactId keys and dot-separated backward-compat keys.
 
