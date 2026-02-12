@@ -108,17 +108,6 @@ These are real vulnerabilities in the base OS packages (ubuntu:24.04).
 
 ## JAR-Level Vulnerabilities (ALL FALSE POSITIVES)
 
-  False Positive Breakdown
-  ┌─────────────┬──────────────────────┬─────────────────────────────────────────────┬────────────────────────────────────┐
-  │ Scanner key │     Flagged JARs     │                 Wrong CVEs                  │          Actually affects          │
-  ├─────────────┼──────────────────────┼─────────────────────────────────────────────┼────────────────────────────────────┤
-  │ jar:common  │ 4 OpenTelemetry JARs │ CVE-2024-46985, CVE-2024-46997 (8 findings) │ DataEase (data visualization tool) │
-  ├─────────────┼──────────────────────┼─────────────────────────────────────────────┼────────────────────────────────────┤
-  │ jar:okhttp  │ 1 OpenTelemetry JAR  │ CVE-2021-0341, CVE-2016-2402 (2 findings)   │ OkHttp (not this JAR)              │
-  ├─────────────┼──────────────────────┼─────────────────────────────────────────────┼────────────────────────────────────┤
-  │ jar:metrics │ 1 OpenTelemetry JAR  │ CVE-2022-20621 (1 finding)                  │ Jenkins Metrics Plugin             │
-  └─────────────┴──────────────────────┴─────────────────────────────────────────────┴────────────────────────────────────┘
-
 ### False Positive #1: `jar:common` -- 4 JARs flagged
 
 | Flagged JAR file | Actual library | Scanner identified as |

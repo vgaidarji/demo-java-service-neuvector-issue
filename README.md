@@ -15,6 +15,6 @@ Created to showcase the issue with false positives reported by [NeuVector Scanne
 2. Run NeuVector scanner using latest version using podman/docker command
    ```
    podman run --rm -v /run/podman/podman.sock:/var/run/docker.sock -v $(pwd):/results --security-opt label=disable neuvector/scanner:latest -i localhost/demo-java-service:latest
-  ```
+   ```
 3. Observe the results and verify that the false positives are reported.
-4. Apply the patch from `/neuvector-scanner-patch` to the upstream https://github.com/neuvector/scanner and recheck using patched scanner.
+4. Apply the patch from `/neuvector-scanner-patch` to the upstream https://github.com/neuvector/scanner and recheck using patched scanner. See [neuvector-scanner-patch](./neuvector-scanner-patch) for more detailed analysis.
